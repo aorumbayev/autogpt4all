@@ -1,0 +1,3 @@
+-   https://github.com/nomic-ai/gpt4all
+-   https://github.com/go-skynet/LocalAI
+-   https://github.com/Significant-Gravitas/Auto-GPT
