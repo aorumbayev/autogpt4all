@@ -23,14 +23,23 @@ if [ "$uninstall" = true ] ; then
     exit 0
 fi
 
-# Check if the directory exists, if not clone the repository
+# Check if the directory exists, if not clone the repository, else pull the latest changes
 if [ ! -d "LocalAI" ]; then
   git clone https://github.com/go-skynet/LocalAI
+else
+  cd LocalAI
+  git pull
+  cd ..
 fi
 
 cd LocalAI
 make build
-wget $model_url -O models/gpt-3.5-turbo
+
+# Only download the model if a custom URL is provided or if the model does not already exist
+if [ ! -z "$2" ] || [ ! -f "models/gpt-3.5-turbo" ]; then
+    wget $model_url -O models/gpt-3.5-turbo
+fi
+
 cd ..
 
 # Check if on macOS, if so install extra prerequisites using brew
@@ -38,9 +47,12 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     brew install cmake go
 fi
 
-cp .env.template Auto-GPT/.env
-
-# Check if the directory exists, if not clone the repository
+# Check if the directory exists, if not clone the repository, else pull the latest changes
 if [ ! -d "Auto-GPT" ]; then
   git clone -b stable https://github.com/Significant-Gravitas/Auto-GPT.git
+  cp .env.template Auto-GPT/.env
+else
+  cd Auto-GPT
+  git pull
+  cd ..
 fi
