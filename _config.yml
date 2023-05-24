@@ -1,0 +1,10 @@
+title: AutoGPT4All.sh
+description: Simple bash script to run AutoGPT against open source GPT4All models locally using LocalAI server
+show_downloads: false
+google_analytics:
+theme: jekyll-theme-hacker
+
+# Build settings
+remote_theme: pages-themes/hacker@v0.2.0
+plugins:
+  - jekyll-remote-theme # add this line to the plugins list if you already have one
