@@ -1,16 +1,10 @@
-<div align="center">
-  <a href="https://github.com/aorumbayev/autogpt4all">
-    <img src="https://bafkreif7cbmuvhztfdlscnmgi3ob32d6ulkqgbjqy4cff2krth4dynwwhe.ipfs.nftstorage.link">
-  </a>
-</div>
+AutoGPT4All is a simple bash script that sets up and configures [AutoGPT](https://github.com/Significant-Gravitas/Auto-GPT.git) running with the [GPT4All](#) model on the [LocalAI](https://github.com/go-skynet/LocalAI) server. This setup allows you to run queries against an open-source licensed model without any limits, completely free and offline.
 
 <p align="center">
     <img  src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Faorumbayev%2Fautogpt4all&countColor=black&style=flat" />
     <a target="_blank" href="https://github.com/aorumbayev/autogpt4all"><img src="https://img.shields.io/github/stars/aorumbayev/autogpt4all?color=black" /></a>
     <a target="_blank" href="https://github.com/aorumbayev/2Fautogpt4all/network/members"><img src="https://img.shields.io/github/forks/aorumbayev/autogpt4all?color=black" /></a>
 </p>
-
-AutoGPT4All is a simple bash script that sets up and configures [AutoGPT](https://github.com/Significant-Gravitas/Auto-GPT.git) running with the [GPT4All](#) model on the [LocalAI](https://github.com/go-skynet/LocalAI) server. This setup allows you to run queries against an open-source licensed model without any limits, completely free and offline.
 
 ## 🚀 Quickstart
 
@@ -66,4 +60,4 @@ Please note, to simplify this script and setup, by default the downloaded model 
 
 Special thanks to everyone who starred the repository ❤️
 
-[![Stargazers repo roster for @aorumbayev/autogpt4all](https://reporoster.com/stars/dark/aorumbayev/autogpt4all)](https://github.com/aorumbayev/autogpt4all/stargazers)
+[![Stargazers repo roster for @aorumbayev/autogpt4all](https://reporoster.com/stars/light/aorumbayev/autogpt4all)](https://github.com/aorumbayev/autogpt4all/stargazers)
