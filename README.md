@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/aorumbayev/autogpt4all">
-    <img src="https://bafybeigvns6nvxn4tdmnkzrlrao6ukohxkqzt2uv7zzvdqqlmo2nfvhi6q.ipfs.nftstorage.link">
+    <img src="https://bafkreif7cbmuvhztfdlscnmgi3ob32d6ulkqgbjqy4cff2krth4dynwwhe.ipfs.nftstorage.link">
   </a>
 </div>
 
