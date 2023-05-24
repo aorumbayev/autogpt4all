@@ -6,11 +6,23 @@ model_url="https://gpt4all.io/models/ggml-gpt4all-l13b-snoozy.bin"
 # Default uninstall option
 uninstall=false
 
+# Help function
+function display_help() {
+    echo "Usage: $0 [OPTIONS]"
+    echo
+    echo "Options:"
+    echo "  --custom_model_url <URL>   Specify a custom URL for the model download step."
+    echo "  --uninstall                Uninstall the projects from your local machine."
+    echo "  --help                     Display this help message and exit."
+    echo
+}
+
 # Parse named arguments
 while [[ "$#" -gt 0 ]]; do
     case $1 in
         --custom_model_url) model_url="$2"; shift ;;
         --uninstall) uninstall=true ;;
+        --help) display_help; exit 0 ;;
         *) echo "Unknown parameter passed: $1"; exit 1 ;;
     esac
     shift
