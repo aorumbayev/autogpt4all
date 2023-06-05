@@ -1,0 +1,36 @@
+# To boot the app run the following:
+# docker-compose run auto-gpt
+version: '3.9'
+
+services:
+  autogpt4all:
+    build:
+      dockerfile: .devcontainer/Dockerfile
+      context: ../
+    tty: true
+    environment:
+      MEMORY_BACKEND: ${MEMORY_BACKEND:-redis}
+      REDIS_HOST: ${REDIS_HOST:-redis}
+    volumes:
+      - ../:/workspace/autogpt4all
+  redis:
+    image: 'redis/redis-stack-server:latest'
+  openapi:
+    image: quay.io/go-skynet/local-ai:master-cublas-cuda12
+    # build:
+    #   context: ../LocalAI/.
+    #   dockerfile: ../LocalAI/Dockerfile
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    ports:
+      - 8080:8080
+    env_file:
+      - ../LocalAI/.env
+    volumes:
+      -  ../LocalAI/models:/models:cached
+    command: ["/usr/bin/local-ai" ]
