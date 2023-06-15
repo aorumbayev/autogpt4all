@@ -1,5 +1,7 @@
 AutoGPT4All is a simple bash script that sets up and configures [AutoGPT](https://github.com/Significant-Gravitas/Auto-GPT.git) running with the [GPT4All](#) model on the [LocalAI](https://github.com/go-skynet/LocalAI) server. This setup allows you to run queries against an open-source licensed model without any limits, completely free and offline.
 
+> If you are interested in building decentralized applications, check out my other repo at [AwesomeAlgorand](https://github.com/aorumbayev/awesome-algorand).
+
 <p align="center">
     <img  src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Faorumbayev%2Fautogpt4all&countColor=black&style=flat" />
     <a target="_blank" href="https://github.com/aorumbayev/autogpt4all"><img src="https://img.shields.io/github/stars/aorumbayev/autogpt4all?color=black" /></a>
