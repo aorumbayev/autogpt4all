@@ -35,6 +35,19 @@ if [ "$uninstall" = true ] ; then
     exit 0
 fi
 
+# Only download the model if a custom URL is provided or if the model does not already exist
+if [ ! -z "$2" ] || [ ! -f "models/gpt-3.5-turbo" ]; then
+    wget $model_url -O models/gpt-3.5-turbo
+fi
+
+# Check if on macOS, if so install extra prerequisites using brew
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    brew install cmake go
+# If on Linux, install extra prerequisites using apt
+elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    sudo apt install -y cmake golang
+fi
+
 # Check if the directory exists, if not clone the repository, else pull the latest changes
 if [ ! -d "LocalAI" ]; then
   git clone https://github.com/go-skynet/LocalAI
@@ -47,17 +60,7 @@ fi
 cd LocalAI
 make build
 
-# Only download the model if a custom URL is provided or if the model does not already exist
-if [ ! -z "$2" ] || [ ! -f "models/gpt-3.5-turbo" ]; then
-    wget $model_url -O models/gpt-3.5-turbo
-fi
-
 cd ..
-
-# Check if on macOS, if so install extra prerequisites using brew
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    brew install cmake go
-fi
 
 # Check if the directory exists, if not clone the repository, else pull the latest changes
 if [ ! -d "Auto-GPT" ]; then
