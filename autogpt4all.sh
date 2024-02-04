@@ -63,11 +63,11 @@ make build
 cd ..
 
 # Check if the directory exists, if not clone the repository, else pull the latest changes
-if [ ! -d "Auto-GPT" ]; then
+if [ ! -d "AutoGPT" ]; then
   git clone -b stable https://github.com/Significant-Gravitas/Auto-GPT.git
-  cp .env.template Auto-GPT/.env
+  cp .env.template AutoGPT/.env
 else
-  cd Auto-GPT
+  cd AutoGPT
   git pull
   cd ..
 fi
