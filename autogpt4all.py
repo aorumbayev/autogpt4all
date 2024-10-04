@@ -42,6 +42,9 @@ if sys.platform == "darwin":
 # Extra prerequisites for Linux (assuming apt package manager)
 elif sys.platform == "linux":
     subprocess.run(["sudo", "apt", "install", "-y", "cmake", "golang"])
+# Extra prerequisites for Windows
+elif sys.platform == "win32":
+    subprocess.run(["choco", "install", "cmake", "golang"])
 
 # Handle LocalAI
 if not os.path.isdir("LocalAI"):
